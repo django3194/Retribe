@@ -1,6 +1,7 @@
-# Firebase App with Ionic 2
+# Retribe App with Ionic 2
 
 
 * npm install
 
 # Based on Ionic 
+s
