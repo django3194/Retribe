@@ -9,6 +9,8 @@ import { UsersPage } from '../pages/users/users';
 import { ChatsPage } from '../pages/chats/chats';
 import { AccountPage } from '../pages/account/account';
 import { ChatViewPage } from '../pages/chat-view/chat-view';
+import { HomePage } from '../pages/home/home';
+import { SettingsPage } from '../pages/settings/settings';
 
 import { AuthProvider } from '../providers/auth-provider/auth-provider';
 import { ChatsProvider } from '../providers/chats-provider/chats-provider';
@@ -37,6 +39,8 @@ const myFirebaseAuthConfig = {
     UsersPage,
     ChatsPage,
     AccountPage,
+    HomePage,
+    SettingsPage,
     ChatViewPage
   ],
   imports: [
@@ -51,6 +55,8 @@ const myFirebaseAuthConfig = {
     UsersPage,
     ChatsPage,
     AccountPage,
+    HomePage,
+    SettingsPage,
     ChatViewPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},
