@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ViewController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { TabsPage } from '../tabs/tabs';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
@@ -7,6 +7,7 @@ import { validateEmail } from '../../validators/email';
 import { AuthProvider } from '../../providers/auth-provider/auth-provider';
 import { UserProvider } from '../../providers/user-provider/user-provider';
 import { UtilProvider } from '../../providers/utils';
+import {SlidesPage} from '../slides/slides';
 
 @Component({
 	templateUrl: 'login.html'
@@ -17,8 +18,13 @@ export class LoginPage {
       public auth: AuthProvider, 
       public userProvider: UserProvider,
       public util: UtilProvider,
-      public storage:Storage) {
+      public storage:Storage, private viewCtrl: ViewController) {
     }
+    
+    gotoslides(){
+        this.nav.setRoot(SlidesPage);
+    }
+    
 
     ngOnInit() {
         this.loginForm = new FormGroup({

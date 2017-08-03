@@ -12,5 +12,5 @@ export class TabsPage {
 	chats = ChatsPage;
 	users = UsersPage;
     profile = AccountPage;
-	home=HomePage;
+	home = HomePage;
 }
