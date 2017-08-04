@@ -39,18 +39,15 @@ export class LoginPage {
                 this.storage.set('uid', data.uid);
                 this.nav.setRoot(TabsPage);
             }, (error) => {
-                let alert = this.util.doAlert("Error", error.message?error.message:error, "Ok");
+                let alert = this.util.doAlert("Error", error.message ? error.message : error, "Ok");
                 alert.present();
             });
     };
 
     //Login request from facebook
     signinWithFB() {
-        this.auth.loginWithFacebook().then(facebook=>{
+        this.auth.loginWithFacebook().then(facebook => {
             this.nav.setRoot(TabsPage);
-        }).catch((error)=>{
-            let alert = this.util.doAlert("Error",error,"Ok");
-            alert.present();
         })
     }
 
