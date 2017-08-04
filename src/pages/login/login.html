@@ -7,12 +7,11 @@
 <ion-content class="padding">
    <form [formGroup]="loginForm">
     <ion-list>
-       
         <ion-item>
             <ion-label floating>Email</ion-label>
             <ion-input type="text" formControlName="email"></ion-input>
         </ion-item>
-
+       
         <ion-item>
             <ion-label floating>Password</ion-label>
             <ion-input type="password" formControlName="password"></ion-input>
@@ -22,9 +21,13 @@
     <div padding>
       <button ion-button primary block (click)="signin()" [disabled]="!loginForm.valid">Sign In</button>
     </div>
+
+    <div padding>
+      <button ion-button primary block (click)="signinWithFB()" >Sign In with Facebook</button>
+    </div>
     
     <div padding>
-      <button ion-button full clear favorite (click)="createAccount()" [disabled]="!loginForm.valid">
+      <button ion-button full clear favorite (click)="createAccount()">
           <ion-icon name="person"></ion-icon>
           Create an Account</button>
     </div>

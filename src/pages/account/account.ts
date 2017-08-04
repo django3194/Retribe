@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
-import { AuthProvider } from '../../providers/auth-provider/auth-provider';
-import { UserProvider } from '../../providers/user-provider/user-provider';
+
+import { AuthProvider } from '../../providers/authprovider/authprovider';
+import { UserProvider } from '../../providers/userprovider/userprovider';
+import { LoginPage } from '../login/login';
 
 @Component({
     templateUrl: 'account.html'
@@ -30,5 +32,6 @@ export class AccountPage {
     logout() {
         this.local.remove('uid');
         this.auth.logout();
+        this.nav.setRoot(LoginPage);
     }
 }

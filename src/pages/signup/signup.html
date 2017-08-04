@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Sign Up</ion-title>    
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="padding">
+    
+   <form [formGroup]="signUpForm">
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input type="text" formControlName="email" [class.invalid]="!signUpForm.controls.email.valid && signUpForm.controls.email.touched"></ion-input>
+        </ion-item>
+
+        <ion-item *ngIf="!signUpForm.controls.email.valid  && signUpForm.controls.email.touched">
+             <p>Please enter a valid email.</p>
+        </ion-item>
+       
+        <ion-item>
+            <ion-label floating>Display Name</ion-label>
+            <ion-input type="text" formControlName="displayname" [class.invalid]="!signUpForm.controls.displayname.valid && signUpForm.controls.displayname.touched"></ion-input>
+        </ion-item>
+
+        <ion-item *ngIf="!signUpForm.controls.displayname.valid  && signUpForm.controls.displayname.touched">
+             <p>Please enter a valid Display Name.</p>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password" formControlName="password"   [class.invalid]="!signUpForm.controls.password.valid && signUpForm.controls.password.touched"></ion-input>
+        </ion-item>
+
+        <ion-item *ngIf="!signUpForm.controls.password.valid  && signUpForm.controls.password.touched">
+             <p>Please enter a valid  Password.</p>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Confirm Password</ion-label>
+            <ion-input type="password" formControlName="confirmPassword" [class.invalid]="!signUpForm.controls.confirmPassword.valid && signUpForm.controls.confirmPassword.touched"></ion-input>
+       </ion-item>
+       
+       <ion-item *ngIf="signUpForm.controls.confirmPassword.errors && signUpForm.controls.confirmPassword.touched">
+             <p>Password mismatch.</p>
+        </ion-item>
+        
+    </ion-list>
+    
+    
+    
+    <div padding>
+      <button ion-button full clear favorite (click)="createAccount()" [disabled]="!signUpForm.valid">
+          <ion-icon name="person"></ion-icon>
+          Create an Account</button>
+    </div>
+    
+   </form>
+</ion-content>

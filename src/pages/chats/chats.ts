@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { UserProvider } from '../../providers/user-provider/user-provider';
+import { UserProvider } from '../../providers/userprovider/userprovider';
 import { ChatsProvider } from '../../providers/chats-provider/chats-provider';
 import { AngularFire } from 'angularfire2';
 import { Observable } from 'rxjs/Observable';

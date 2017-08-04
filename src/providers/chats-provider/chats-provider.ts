@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFire } from 'angularfire2';
-import { UserProvider } from '../user-provider/user-provider';
+import { UserProvider } from '../userprovider/userprovider';
 
 @Injectable()
 export class ChatsProvider {

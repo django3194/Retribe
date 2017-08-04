@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { FirebaseListObservable } from 'angularfire2';
-import { UserProvider } from '../../providers/user-provider/user-provider';
+import { UserProvider } from '../../providers/userprovider/userprovider';
 import { ChatViewPage } from '../chat-view/chat-view';
 
 @Component({

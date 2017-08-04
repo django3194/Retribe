@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams, Content } from 'ionic-angular';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { ChatsProvider } from '../../providers/chats-provider/chats-provider';
-import { UserProvider } from '../../providers/user-provider/user-provider';
+import { UserProvider } from '../../providers/userprovider/userprovider';
 
 @Component({
   templateUrl: 'chat-view.html',
