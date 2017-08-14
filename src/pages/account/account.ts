@@ -6,8 +6,7 @@ import { UserProvider } from '../../providers/userprovider/userprovider';
 import { SlidesPage } from '../slides/slides';
 import { App } from 'ionic-angular';
 
-import { AuthProvider } from '../../providers/authprovider/authprovider';
-import { UserProvider } from '../../providers/userprovider/userprovider';
+
 
 
 @Component({

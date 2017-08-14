@@ -1,6 +1,7 @@
 import { Component,ViewChild } from '@angular/core';
 import { NavController,Slides } from 'ionic-angular';
 import { LoginPage } from '../login/login';
+import { SignUpPage } from '../signup/signup';
 
 @Component({
   selector: 'slides-home',
@@ -18,6 +19,10 @@ export class SlidesPage {
 gotologin(){
     this.navCtrl.setRoot(LoginPage);
     
+}
+
+CreateAccount(){
+    this.navCtrl.setRoot(SignUpPage);
 }
 
 /*slideChanged() {

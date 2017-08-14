@@ -40,7 +40,7 @@ export class LoginPage {
     signin() {
         this.auth.signin(this.loginForm.value)
             .then((data) => {
-                this.storage.set('uid', data.uid);
+                this.auth.storeToLocal (data.uid);
                 this.nav.setRoot(TabsPage);
             }, (error) => {
                 let alert = this.util.doAlert("Error", error.message ? error.message : error, "Ok");
@@ -52,6 +52,9 @@ export class LoginPage {
     signinWithFB() {
         this.auth.loginWithFacebook().then(facebook => {
             this.nav.setRoot(TabsPage);
+        },(error)=> {
+            this.nav.setRoot(LoginPage);
+            
         })
     }
 

@@ -57,7 +57,7 @@ export class AuthProvider {
 
     }).catch(function (error) {
       // do nothing since the user cancelled the facebook login.get bacj to login page.
-
+      throw (error);
     });
 
   }

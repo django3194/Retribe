@@ -6,12 +6,14 @@ import { TabsPage } from '../tabs/tabs';
  import { LoginPage } from '../login/login' ;
  import { ConfirmPassword } from '../../validators/confirmPassword'
  import { validateEmail } from '../../validators/email';  
+ import {SlidesPage} from '../slides/slides';
 
 import { Validators, FormBuilder,FormGroup, FormControl } from '@angular/forms';
 
 import { UserProvider } from '../../providers/userprovider/userprovider';
 import { AuthProvider } from '../../providers/authprovider/authprovider';
 import { UtilProvider } from '../../providers/utils';
+
 
 @Component({
 	templateUrl: 'signup.html'
@@ -20,7 +22,7 @@ import { UtilProvider } from '../../providers/utils';
 export class SignUpPage{
     signUpForm:FormGroup;
     
-    constructor(public nav:NavController,
+    constructor(public nav: NavController,
       public auth: AuthProvider, 
       public userProvider: UserProvider,
       public util: UtilProvider,
@@ -42,14 +44,17 @@ export class SignUpPage{
     createAccount() {
         
         let credentials = this.signUpForm.value;
-        console.log(credentials);
         this.auth.createAccount(credentials)
         .then((data) => {
-      // do nothing
+       this.nav.setRoot(TabsPage);
         }, (error) => {
             let alert = this.util.doAlert("Error",error.message?error.message:error,"Ok");
             alert.present();
         });
+    }
+
+    gotoslides(){
+        this.nav.setRoot(SlidesPage);
     }
 
     
