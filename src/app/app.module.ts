@@ -14,6 +14,9 @@ import { ChatsPage } from '../pages/chats/chats';
 import { AccountPage } from '../pages/account/account';
 import { ChatViewPage } from '../pages/chat-view/chat-view';
 import { SignUpPage } from '../pages/signup/signup';
+import { HomePage } from '../pages/home/home';
+import { SettingsPage } from '../pages/settings/settings';
+import { SlidesPage } from '../pages/slides/slides';
 
 import { AuthProvider } from '../providers/authprovider/authprovider';
 import { ChatsProvider } from '../providers/chats-provider/chats-provider';
@@ -39,8 +42,11 @@ export const firebaseConfig = {
     UsersPage,
     ChatsPage,
     AccountPage,
-    ChatViewPage,
-    SignUpPage
+    HomePage,
+    SettingsPage,
+    SlidesPage,
+    SignUpPage,
+    ChatViewPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -55,6 +61,9 @@ export const firebaseConfig = {
     UsersPage,
     ChatsPage,
     AccountPage,
+    HomePage,
+    SettingsPage,
+    SlidesPage,
     ChatViewPage,
     SignUpPage
   ],

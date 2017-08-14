@@ -1,4 +1,4 @@
-# Retribe App with Ionic 2
+# Retribe  with Ionic 2
 
 
 * npm install

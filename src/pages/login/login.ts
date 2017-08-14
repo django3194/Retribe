@@ -10,19 +10,24 @@ import { validateEmail } from '../../validators/email';
 import { AuthProvider } from '../../providers/authprovider/authprovider';
 import { UserProvider } from '../../providers/userprovider/userprovider';
 import { UtilProvider } from '../../providers/utils';
+import {SlidesPage} from '../slides/slides';
 
 @Component({
     templateUrl: 'login.html'
 })
 export class LoginPage {
-    loginForm: any;
-    constructor(public nav: NavController,
-        public auth: AuthProvider,
-        public userProvider: UserProvider,
-        public util: UtilProvider,
-        public storage: Storage,
-        public app: App) {
+	loginForm:any;
+    constructor(public nav:NavController,
+      public auth: AuthProvider, 
+      public userProvider: UserProvider,
+      public util: UtilProvider,
+      public storage:Storage) {
     }
+    
+    gotoslides(){
+        this.nav.setRoot(SlidesPage);
+    }
+    
 
     ngOnInit() {
         this.loginForm = new FormGroup({
@@ -35,7 +40,6 @@ export class LoginPage {
     signin() {
         this.auth.signin(this.loginForm.value)
             .then((data) => {
-                console.log(data);
                 this.storage.set('uid', data.uid);
                 this.nav.setRoot(TabsPage);
             }, (error) => {

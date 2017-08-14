@@ -1,11 +1,18 @@
 <ion-header>
     <ion-navbar color="primary">
-        <ion-title>Login</ion-title>    
+        <ion-title>Login</ion-title> 
+            <ion-buttons end>
+      <button ion-button  (click)= "gotoslides()">
+        cancel
+      </button>
+    </ion-buttons>     
     </ion-navbar>
 </ion-header>
 
 <ion-content class="padding">
-   <form [formGroup]="loginForm">
+
+
+ <form [formGroup]="loginForm">
     <ion-list>
         <ion-item>
             <ion-label floating>Email</ion-label>

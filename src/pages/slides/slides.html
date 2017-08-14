@@ -1,0 +1,51 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+  </ion-navbar>
+</ion-header>
+
+<ion-content fullscreen="true"  overflow-scroll="false">
+    <ion-scroll scrollX="true" scrollY="true" style="margin:17rem; position:fixed; display:inline; top:0; right:0; bottom:0; left:0; white-space: nowrap;"></ion-scroll>
+    <div  id ="container1">
+<ion-slides pager="true"> <!--(ionSlideDidChange)="slideChanged()"-->
+
+<ion-slide *ngFor="let slide of slider">
+    <!--<p><button ion-button icon-right color="transparent" (click)="next()">{{ SkipMsg }}</button></p-->
+    <img [src]="slide.image" alt="A beautiful image with some cool stuff">
+    <h4 class="slide-title" [innerHTML]="slide.title"></h4>
+    <p [innerHTML]="slide.content"></p>
+</ion-slide>
+<ion-slide>
+    <!--p><button ion-button icon-right color="transparent">{{ SkipMsg }}</button></p-->
+     <img src="assets/images/re.png" alt="Re-establish, Re-invent, Re-viguor">
+    </ion-slide>
+
+</ion-slides>
+</div>
+<div  id = "container2">
+<ion-row>
+    <ion-col width-100 style="text-align: center;"> 
+ <button ion-button color="primary"   icon-end>
+         Let's "Re" your life!
+        <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+    </ion-col>
+</ion-row>
+<ion-row>    
+
+    <ion-col width-100 style="text-align: center;"> 
+       <p class="foot-note"> <b>Already have an account?<button ion-button color="primary" (click) ="gotologin()" icon-end small clear style=" margin-top: -8px ;">Sign In.</button></b></p>
+    </ion-col>
+ </ion-row>
+</div>
+   <!--video controls autoplay muted loop playsinline poster="assets/images/re.png" preload="auto" id="video"> 
+        <source src="assets/video/Ground-zero.mp4" type='video/mp4'>
+        <source src="assets/video/Ground-zero.mp4" type='video/mp4; codecs="h.264"'>
+        <source src="assets/video/Ground-zero.webm" type='video/webm'>
+        <source src="assets/video/Ground_zero.ogv" type='video/ogv'>
+    </video-->
+    <!--commenting video for future use -->
+</ion-content>
+ 
+        
+
+

@@ -5,30 +5,50 @@ import { AngularFire } from 'angularfire2';
 import { LoginPage } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs';
 import { AuthProvider } from '../providers/authprovider/authprovider';
+import { SlidesPage } from '../pages/slides/slides';
+import { LoadingController } from 'ionic-angular';
+//import { NavController, App} from "ionic-angular/index";
+
+
+
+
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any;
+  rootPage:any = SlidesPage;
+      
 
-  constructor(platform: Platform, public af: AngularFire, public authProvider:AuthProvider) {
+    
+
+    //private navCtrl: NavController;
+
+  constructor(platform: Platform, public af: AngularFire, public authProvider:AuthProvider ) {
+    
+            //this.rootPage = SlidesPage;
+
     platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
+  
       StatusBar.styleDefault();
       Splashscreen.hide();
       this.intialize();
     });
   }
 
-  intialize() {
+  intialize() { 
+    
     this.af.auth.subscribe(auth => {
+      
        if(auth) {
-          this.rootPage = TabsPage;
+         
+          this.rootPage.setRoot = TabsPage;
+
+          
         } else {
-          this.rootPage = LoginPage;
-        }
+         this.rootPage.setRoot = LoginPage;
+        
+    }
     });
   }
 }
