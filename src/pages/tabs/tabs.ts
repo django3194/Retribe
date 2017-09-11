@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ChatsPage } from '../chats/chats'; 
+import { TribesPage } from '../tribes/tribes'; 
 import { AccountPage } from '../account/account';
 import { UsersPage } from '../users/users';
 import { HomePage } from '../home/home';
@@ -9,7 +9,7 @@ import { HomePage } from '../home/home';
 	templateUrl: 'tabs.html'
 })
 export class TabsPage {
-	chats = ChatsPage;
+	tribes = TribesPage;
 	users = UsersPage;
     profile = AccountPage;
 	home = HomePage;

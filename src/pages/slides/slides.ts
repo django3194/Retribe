@@ -2,6 +2,7 @@ import { Component,ViewChild } from '@angular/core';
 import { NavController,Slides } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { SignUpPage } from '../signup/signup';
+import { TabsPage } from '../tabs/tabs';
 
 @Component({
   selector: 'slides-home',
@@ -17,7 +18,7 @@ export class SlidesPage {
 
   }
 gotologin(){
-    this.navCtrl.setRoot(LoginPage);
+    this.navCtrl.setRoot(TabsPage);
     
 }
 

@@ -17,11 +17,16 @@ import { SignUpPage } from '../pages/signup/signup';
 import { HomePage } from '../pages/home/home';
 import { SettingsPage } from '../pages/settings/settings';
 import { SlidesPage } from '../pages/slides/slides';
-
+import {AddtribesPage}  from '../pages/addtribes/addtribes';
 import { AuthProvider } from '../providers/authprovider/authprovider';
 import { ChatsProvider } from '../providers/chats-provider/chats-provider';
 import { UserProvider } from '../providers/userprovider/userprovider';
 import { UtilProvider } from '../providers/utils';
+import { TribesPage } from '../pages/tribes/tribes';
+import { File } from '@ionic-native/file';
+import { Transfer } from '@ionic-native/transfer';
+import { FilePath } from '@ionic-native/file-path';
+import { Camera } from '@ionic-native/camera';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyAaDRWKpmVN1MUibhJeH0e5anN9ypN8Z6E",
@@ -46,6 +51,8 @@ export const firebaseConfig = {
     SettingsPage,
     SlidesPage,
     SignUpPage,
+    TribesPage,
+    AddtribesPage,
     ChatViewPage
   ],
   imports: [
@@ -65,9 +72,11 @@ export const firebaseConfig = {
     SettingsPage,
     SlidesPage,
     ChatViewPage,
+    TribesPage,
+    AddtribesPage,
     SignUpPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},
-  AuthProvider, ChatsProvider, UserProvider, UtilProvider, Storage,Facebook]
+  AuthProvider, File, Transfer,Camera,FilePath, ChatsProvider, UserProvider, UtilProvider, Storage,Facebook]
 })
 export class AppModule {}

@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Add Tribes
+    </ion-title>
+  
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        cancel
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content padding>
+  <ion-list>
+  <ion-item>
+    <ion-input placeholder="Tribename"></ion-input>
+  </ion-item>
+  </ion-list>
+  <!--img  src="assets/images/default.jpg"/-->
+  <img src="{{pathForImage(lastImage)}}" style="width: 100%" [hidden]="lastImage === null">
+  <!--h3 [hidden]="lastImage !== null">Please Select Image!</h3-->
+    <ion-buttons>
+      <button ion-button icon-left (click)="presentActionSheet()">
+        <ion-icon name="camera"></ion-icon>Select Image
+      </button>
+      <button ion-button icon-left (click)="uploadImage()" [disabled]="lastImage === null">
+        <ion-icon name="cloud-upload"></ion-icon>Upload
+      </button>
+    </ion-buttons>
+    <ion-list>
+  <ion-item>
+    <ion-textarea palaceholder="Description"></ion-textarea>
+  </ion-item>
+  </ion-list>
+       <div id="container" class="list list-inst">
+  <label  >
+    <input class="fa fa-search" aria-hidden="true" type="text" name="search" placeholder="&#128269; Search in circle" rel="search">
+  </label>
+</div>
+ <ion-list>
+   <ion-item>
+      <ion-avatar item-left >
+            <img src="assets/images/avatar-ts-woody.png"/> <!-- get image from contact object --> 
+      </ion-avatar>
+      <ion-label>
+            <h2>Vishnu</h2>
+            <p>ivishnupr@gmail.com</p>
+      </ion-label>
+        <ion-checkbox item-right ></ion-checkbox>
+   </ion-item>
+    <ion-item>
+      <ion-avatar item-left >
+            <img src="assets/images/avatar-ts-woody.png"/> <!-- get image from contact object --> 
+        </ion-avatar>
+    <ion-label><h2>Vishnu</h2>
+      <p>ivishnupr@gmail.com</p>
+    </ion-label>
+    
+    <ion-checkbox item-right></ion-checkbox>
+  </ion-item>
+   <ion-item>
+      <ion-avatar item-left >
+            <img src="assets/images/avatar-ts-woody.png"/> <!-- get image from contact object --> 
+      </ion-avatar>
+      <ion-label>
+            <h2 item-middle>jomcy</h2>
+            <p>jomcyjhony@gmail.com</p>
+        </ion-label>
+        <ion-checkbox clear item-right ></ion-checkbox>
+   </ion-item>
+   <ion-item>
+      <ion-avatar item-left >
+            <img src="assets/images/avatar-ts-woody.png"/> <!-- get image from contact object --> 
+      </ion-avatar>
+      <ion-label>
+            <h2>Tejas</h2>
+            <p>tejasp@gmail.com</p>
+        </ion-label>
+        <ion-checkbox item-right ></ion-checkbox>
+   </ion-item>
+   <ion-item>
+      <ion-avatar item-left >
+            <img src="assets/images/avatar-ts-woody.png"/> <!-- get image from contact object --> 
+      </ion-avatar>
+      <ion-label>
+            <h2>Nick</h2>
+            <p>icenick@gmail.com</p>
+        </ion-label>
+        <ion-checkbox item-right ></ion-checkbox>
+   </ion-item>
+</ion-list>
+</ion-content>
