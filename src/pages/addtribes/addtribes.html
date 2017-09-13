@@ -1,42 +1,65 @@
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title>
-      Add Tribes
-    </ion-title>
-  
-    <ion-buttons start>
+      <ion-buttons left>
       <button ion-button (click)="dismiss()">
         cancel
       </button>
-    </ion-buttons>
+        </ion-buttons>
+    <ion-title >
+      Add Tribes
+    </ion-title>
+  
+    <ion-buttons right>
+      <button ion-button >
+        create
+      </button>
+      </ion-buttons>
+    
   </ion-navbar>
 </ion-header>
  
 <ion-content padding>
-  <ion-list>
-  <ion-item>
-    <ion-input placeholder="Tribename"></ion-input>
-  </ion-item>
-  </ion-list>
+
+  
   <!--img  src="assets/images/default.jpg"/-->
   <img src="{{pathForImage(lastImage)}}" style="width: 100%" [hidden]="lastImage === null">
   <!--h3 [hidden]="lastImage !== null">Please Select Image!</h3-->
-    <ion-buttons>
-      <button ion-button icon-left (click)="presentActionSheet()">
-        <ion-icon name="camera"></ion-icon>Select Image
-      </button>
+      <ion-list>
+      
+      <ion-item class="input-bar">
+        <ion-item class="input-bar-item ">
+          
+             <ion-item item-right class="input-group">
+                <ion-input class=" width100" placeholder="Tribename"></ion-input></ion-item>
+                <ion-item item-left class="input-group-btn">
+                  <button class="button" ion-button clear  (click)="presentActionSheet()">
+                  <ion-icon name="camera"></ion-icon>
+                  </button>
+                  
+                
+                </ion-item>
+          
+        </ion-item>
+      </ion-item>
+      </ion-list>
+  
+
+      
+    <!--ion-buttons>
       <button ion-button icon-left (click)="uploadImage()" [disabled]="lastImage === null">
         <ion-icon name="cloud-upload"></ion-icon>Upload
       </button>
-    </ion-buttons>
+    </ion-buttons-->
     <ion-list>
   <ion-item>
-    <ion-textarea palaceholder="Description"></ion-textarea>
+    <ion-label stacked>Description</ion-label>
+    <ion-textarea ></ion-textarea>
   </ion-item>
   </ion-list>
        <div id="container" class="list list-inst">
-  <label  >
-    <input class="fa fa-search" aria-hidden="true" type="text" name="search" placeholder="&#128269; Search in circle" rel="search">
+  <label class="rt">
+    <ion-searchbar   placeholder="&#128269; Search in circle" >
+    </ion-searchbar>
   </label>
 </div>
  <ion-list>

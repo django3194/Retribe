@@ -2,17 +2,64 @@ addtribes-page{}
 
 
 
-input{
- border-radius:15px;
- -moz-border-radius:15px;
- -webkit-border-radius:15px;
- border:solid 1px black;
- padding: 5px;
- font-family: "FontAwesome";
+//*rt{
+// border-radius:15px;
+ //-moz-border-radius:15px;
+ //-webkit-border-radius:15px;
+ //border:solid 1px black;
+ //padding: 5px;
+ //font-family: "FontAwesome";
+//}
+//#container{
+  //  padding: 5px;
+    //width: 200px; 
+    //margin-left: auto; 
+    //margin-right: auto;
+    //}
+ion-navbar{
+    text-align: center;
 }
-#container{
-    padding: 5px;
-    width: 200px; 
-    margin-left: auto; 
-    margin-right: auto;
-    }
+size{
+    width: 55px;
+}
+
+
+.input-bar {
+    
+    border-style: none;
+}
+
+.input-bar-item {
+    
+    
+    
+}
+
+.input-group-btn{
+    width: 15%;
+    float: left;
+     margin: 0 auto;
+     height: 60px; 
+     width: 60px; 
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 50%;
+    box-shadow: 0 0 5px gray;
+    display: block;
+    opacity: .30;
+
+}
+ion-icon{
+    font-size: 20px;
+    align-items: flex-start;
+    
+}
+    
+.width100 {
+    width: 85%;
+    float: right;
+    
+
+
+}
