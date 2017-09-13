@@ -1,0 +1,18 @@
+.avatar{
+float: left;
+width:10%;
+text-align: center;
+display: block;
+align-self: auto; /*for the img inside your div */ 
+margin: 0 auto;
+}
+
+.username{
+    float: right;
+    width:90%;
+}
+
+.content {
+    max-width: 98%;
+    margin: auto;
+}

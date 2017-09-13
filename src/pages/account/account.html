@@ -1,20 +1,83 @@
 <ion-header>
     <ion-navbar color="primary">
-        <ion-title>Account</ion-title>   
+        <ion-title>Account</ion-title>  
+        <ion-buttons end>
+            <button ion-button  color="royal" (click)="logout()">
+              Logout
+            </button></ion-buttons> 
     </ion-navbar>
 </ion-header>
 
 <ion-content>
+        <form [formGroup]="userProfileForm" (ngSubmit)="logForm()">
     <ion-list>
-        <ion-card>
+        <!-- <ion-card>
             <img *ngIf="!user.picture" src="assets/images/default.jpg"/>
             <img *ngIf="user.picture" src="{{user.picture}}"/>
         </ion-card>
         <ion-item>
             <button ion-button full (click)="updatePicture()">Change Picture</button>
         </ion-item>
-        <a ion-item primary (click)="logout()">
-            Logout
-        </a>
+        
+        <img src="{{pathForImage(lastImage)}}" style="width: 100%" [hidden]="lastImage === null"> -->
+        <!--h3 [hidden]="lastImage !== null">Please Select Image!</h3-->
+    <ion-list>
+            
+            <ion-item class="input-bar">
+              <ion-item class="input-bar-item ">
+                
+                   <ion-item item-right class="input-group">
+                      <ion-input class=" width100" formControlName="username" placeholder="Username" floating></ion-input></ion-item>
+                      <ion-item item-left class="input-group-btn">
+                        <button class="button" ion-button clear  (click)="presentActionSheet()">
+                        <ion-icon name="camera"></ion-icon>
+                        </button>
+                        
+                      
+                      </ion-item>
+                
+              </ion-item>
+            </ion-item>
+            </ion-list>
+        
+      
+            
+          <!--ion-buttons>
+            <button ion-button icon-left (click)="uploadImage()" [disabled]="lastImage === null">
+              <ion-icon name="cloud-upload"></ion-icon>Upload
+            </button>
+          </ion-buttons-->
+          <ion-list>
+        <ion-item>
+          <ion-label stacked>Add Bio Here</ion-label>
+          <ion-textarea formControlName="bio"></ion-textarea>
+        </ion-item>
+        </ion-list>
+
     </ion-list>
+
+
+    <ion-item>
+            <ion-label>Birth Date</ion-label>
+            <ion-datetime formControlName="birthdate" displayFormat="MMM DD, YYYY" pickerFormat="DD MMMM YYYY" [(ngModel)]="myDate"></ion-datetime>
+          </ion-item>
+
+
+
+
+
+        <ion-item>
+            <ion-label>Gender</ion-label>
+            <ion-select formControlName="gender" [(ngModel)]="gender">
+              <ion-option value="female" selected>Female</ion-option>
+              <ion-option value="male">Male</ion-option>
+              <ion-option value="other">Other</ion-option>
+            </ion-select>
+          </ion-item>
+
+        <button ion-button type="submit" [disabled]="!userProfileForm.valid">Submit</button>
+      </form>
+
+
+
 </ion-content>
