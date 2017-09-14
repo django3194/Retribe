@@ -27,7 +27,8 @@ import { File } from '@ionic-native/file';
 import { Transfer } from '@ionic-native/transfer';
 import { FilePath } from '@ionic-native/file-path';
 import { Camera } from '@ionic-native/camera';
-
+import { TribeinfoPage } from '../pages/tribeinfo/tribeinfo';
+import { TriberPage } from '../pages/triber/triber';
 export const firebaseConfig = {
   apiKey: "AIzaSyAaDRWKpmVN1MUibhJeH0e5anN9ypN8Z6E",
     authDomain: "retribe-c906e.firebaseapp.com",
@@ -53,6 +54,8 @@ export const firebaseConfig = {
     SignUpPage,
     TribesPage,
     AddtribesPage,
+    TribeinfoPage,
+    TriberPage,
     ChatViewPage
   ],
   imports: [
@@ -74,6 +77,8 @@ export const firebaseConfig = {
     ChatViewPage,
     TribesPage,
     AddtribesPage,
+    TribeinfoPage,
+    TriberPage,
     SignUpPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},

@@ -11,128 +11,136 @@
 <ion-content>
   <ion-list>
 
-    <ion-list-header>Today</ion-list-header>
+    <ion-list-header class="no-border">Tribe invitations</ion-list-header>
 
-    <ion-item>
-      <ion-avatar item-startS>
+    <ion-item (click)="gototribeinfo()">
+      <ion-avatar item-left>
         <img src="assets/images/avatar-ts-woody.png">
       </ion-avatar>
-      <h2>Woody</h2>
-      <p>This town ain't big enough for the two of us!</p>
-      <ion-note item-right>3:43 pm</ion-note>
+      <ion-label>
+      <p><b> Vishnu</b> invited you to Tribe 1</p>
+      </ion-label>
+      <ion-note item-right> 3:43 pm</ion-note>
     </ion-item>
 
     <ion-item>
-      <ion-avatar end>
+      <ion-avatar item-left>
         <img src="assets/images/avatar-ts-buzz.png">
       </ion-avatar>
-      <h2>Buzz Lightyear</h2>
-      <p>My eyeballs could have been sucked from their sockets!</p>
+      <ion-label>
+      <p><b>Tejas </b> invited you to Tribe 2</p>
+      </ion-label>
       <ion-note item-right>1:12 pm</ion-note>
     </ion-item>
 
     <ion-item>
-      <ion-avatar item-start>
+      <ion-avatar item-left>
         <img src="assets/images/avatar-ts-jessie.png">
       </ion-avatar>
-      <h2>Jessie</h2>
-      <p>Well aren't you just the sweetest space toy I ever did meet!</p>
+      <ion-label>
+      <p><b>Nick</b> invited you to Tribe 3</p>
+      </ion-label>
       <ion-note item-right>10:03 am</ion-note>
     </ion-item>
 
     <ion-item>
-      <ion-avatar item-start>
+      <ion-avatar item-left>
         <img src="assets/images/avatar-ts-potatohead.png">
       </ion-avatar>
-      <h2>Mr. Potato Head</h2>
-      <p>You're not turning me into a Mashed Potato.</p>
+      <ion-label>
+      <p><b>Jomcy</b> invited you to Tribe 4</p>
+      </ion-label>
       <ion-note item-right>5:47 am</ion-note>
     </ion-item>
 
   </ion-list>
 
-  <ion-list>
+  <div>
+   <ion-list-header class="no-border">My Tribes</ion-list-header>
+  </div>
 
-    <ion-list-header>Yesterday</ion-list-header>
-
-    <ion-item>
-      <ion-avatar item-start>
+    <ion-grid >
+      <ion-row >
+        <ion-col width-33>
+        <ion-avatar>
         <img src="assets/images/avatar-ts-hamm.png">
-      </ion-avatar>
-      <h2>Hamm</h2>
-      <p>You heard of Kung Fu? Well get ready for pork chop.</p>
-      <ion-note item-right>11:11 pm</ion-note>
-    </ion-item>
+       </ion-avatar>
+        <span>Tribe Yoga</span>
+        </ion-col>
 
-    <ion-item>
-      <ion-avatar item-start>
+    
+        <ion-col width-33>
+      <ion-avatar >
         <img src="assets/images/avatar-ts-slinky.png">
       </ion-avatar>
-      <h2>Slinky Dog</h2>
-      <p>I may not be a smart dog, but I know what roadkill is.</p>
-      <ion-note item-right>8:54 pm</ion-note>
-    </ion-item>
+      <span>Tribe Maditation</span>
+        </ion-col>
 
-    <ion-item>
-      <ion-avatar item-start>
+
+      <ion-col width-33>
+      <ion-avatar >
         <img src="assets/images/avatar-ts-rex.png">
       </ion-avatar>
-      <h2>Rex</h2>
-      <p>Were you scared? Tell me honestly.</p>
-      <ion-note item-right>7:22 am</ion-note>
-    </ion-item>
+      <span>Tribe Aerobics</span>
+      </ion-col>
+      </ion-row>
+  </ion-grid>
 
-    <ion-item>
-      <ion-avatar item-start>
-        <img src="assets/images/avatar-ts-bullseye.png">
+   
+   <ion-grid>
+      <ion-row>
+        <ion-col width-33>
+      <ion-avatar>
+        <img src="assets/images/avatar-ts-hamm.png">
       </ion-avatar>
-      <h2>Bullseye</h2>
-      <p>Neigh!</p>
-      <ion-note item-right>2:08 am</ion-note>
-    </ion-item>
+      <span>Tribe Yoga</span>
+        </ion-col>
 
-  </ion-list>
-
-  <ion-list>
-
-    <ion-list-header>Last Week</ion-list-header>
-
-    <ion-item>
-      <ion-avatar item-start>
-        <img src="assets/images/avatar-ts-barbie.png">
+    
+        <ion-col width-33>
+      <ion-avatar >
+        <img src="assets/images/avatar-ts-slinky.png">
       </ion-avatar>
-      <h2>Barbie</h2>
-      <p>So, who's ready for Ken's dream tour?</p>
-      <ion-note item-right>Sun</ion-note>
-    </ion-item>
+      <span>Tribe Maditation</span>
+        </ion-col>
 
-    <ion-item>
-      <ion-avatar item-start>
-        <img src="assets/images/avatar-ts-squeeze.png">
+
+      <ion-col width-33>
+      <ion-avatar >
+        <img src="assets/images/avatar-ts-rex.png">
       </ion-avatar>
-      <h2>Squeeze</h2>
-      <p>The claw is our master.</p>
-      <ion-note item-right>Fri</ion-note>
-    </ion-item>
+      <span>Tribe Aerobics</span>
+      </ion-col>
+      </ion-row>
 
-    <ion-item>
-      <ion-avatar item-start>
-        <img src="assets/images/avatar-ts-sarge.png">
+
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col width-33>
+      <ion-avatar>
+        <img src="assets/images/avatar-ts-hamm.png">
       </ion-avatar>
-      <h2>Sarge</h2>
-      <p>Code Red, repeat: We're at Code Red!</p>
-      <ion-note item-right>Wed</ion-note>
-    </ion-item>
+      <span>Tribe Yoga</span>
+        </ion-col>
 
-    <ion-item>
-      <ion-avatar item-start>
-        <img src="assets/images/avatar-ts-bopeep.png">
+    
+        <ion-col width-33>
+      <ion-avatar >
+        <img src="assets/images/avatar-ts-slinky.png">
       </ion-avatar>
-      <h2>Bo Peep</h2>
-      <p>What would you say if I get someone else to watch the sheep for me tonight?</p>
-      <ion-note item-right>Mon</ion-note>
-    </ion-item>
+      <span>Tribe Maditation</span>
+        </ion-col>
 
-  </ion-list>
 
+      <ion-col width-33>
+      <ion-avatar >
+        <img src="assets/images/avatar-ts-rex.png">
+      </ion-avatar>
+      <span>Tribe Aerobics</span>
+      </ion-col>
+      </ion-row>
+
+
+    </ion-grid>
 </ion-content>

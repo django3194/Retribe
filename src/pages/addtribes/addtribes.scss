@@ -25,41 +25,43 @@ size{
 
 
 .input-bar {
-    
-    border-style: none;
+border-top: 0px;
+border-left: 0px;
+border-right: 0px;
+border-bottom: 0px;
+border:none!important;
 }
 
-.input-bar-item {
-    
-    
-    
-}
+
 
 .input-group-btn{
-    width: 15%;
+    width: 10%;
     float: left;
-     margin: 0 auto;
-     height: 60px; 
-     width: 60px; 
+    height: 80px; 
+    width: 80px; 
     border: 1px solid black;
-    display: flex;
     flex-wrap: wrap;
-    border-radius: 50%;
+    border-radius: 100%;
     box-shadow: 0 0 5px gray;
     display: block;
-    opacity: .30;
+    opacity: .50;
+    color: #000;
+    }
 
-}
-ion-icon{
-    font-size: 20px;
-    align-items: flex-start;
-    
-}
     
 .width100 {
-    width: 85%;
+    width: 90%;
     float: right;
+    }
+
+    .group{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    display: block;
     
-
-
-}
+    }

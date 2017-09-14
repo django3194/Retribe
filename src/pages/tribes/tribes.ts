@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {  NavController, NavParams, ViewController , ModalController } from 'ionic-angular';
 import {AddtribesPage} from '../addtribes/addtribes';
+import{TribeinfoPage} from '../tribeinfo/tribeinfo';
 
 @Component({
 	selector: 'tribes-page',
@@ -19,6 +20,11 @@ Modal.present();
 
 
 
+}
+gototribeinfo(){
+
+	let m = this.modalCtrl.create(TribeinfoPage);
+	m.present();
 }
 
 
